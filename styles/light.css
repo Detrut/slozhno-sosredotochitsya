@@ -3,7 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.page.theme_light { 
+.page.theme_light {
   --decor-color: #353430;
   --label-color: #FFC2E6;
   --text-shadow-color: #FF0070;
@@ -20,16 +20,16 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root { 
-  --decor-color: #353430;
-  --label-color: #FFC2E6;
-  --text-shadow-color: #FF0070;
-  --main-text-color: #353430;
-  --subtitle-color: #353430;
-  --title-color: #353430;
-  --subtitle-bg-color: #FF8DCB;
-  --page-bg-color: none;
-  --background-image: url(../images/cover-image-light.png);
+  :root {
+    --decor-color: #353430;
+    --label-color: #FFC2E6;
+    --text-shadow-color: #FF0070;
+    --main-text-color: #353430;
+    --subtitle-color: #353430;
+    --title-color: #353430;
+    --subtitle-bg-color: #FF8DCB;
+    --page-bg-color: none;
+    --background-image: url(../images/cover-image-light.png);
   }
 
   .page.theme_light .rec {
