@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--color-title);
+  background-color: var(--page-bg-color);
   max-width: 1024px;
   margin: 0 auto;
   background-image: url(../images/cover-image-dark.png);
@@ -13,7 +13,7 @@
 
 .main {
   margin: 0 20px;
-  background-color: var(--color-title);
+  background-color: var(--page-bg-color);
 }
   
 .header {
@@ -33,8 +33,8 @@
     bottom: 20px;
     width: 25px;
     height: 25px;
-    border-left: 1px solid var(--color-title-bg);
-    border-bottom: 1px solid var(--color-title-bg);
+    border-left: 1px solid var(--decor-color);
+    border-bottom: 1px solid var(--decor-color);
   }
 
   &::after {
@@ -44,8 +44,8 @@
     top: 17px;
     width: 25px;
     height: 25px;
-    border-right: 1px solid var(--color-title-bg);
-    border-top: 1px solid var(--color-title-bg);
+    border-right: 1px solid var(--decor-color);
+    border-top: 1px solid var(--decor-color);
   }
 }
 
@@ -53,17 +53,17 @@
   font-family: var(--font_main);
   font-size: 18px;
   background-color: transparent;
-  color: var(--color-title-bg);
+  color: var(--decor-color);
   text-transform: lowercase;
   border: none;
   padding: 0 12px;
 
   &_active {
-      outline: 2px solid var(--color-title-bg);
+      outline: 2px solid var(--decor-color);
   }
 
   &:hover {
-    outline: 1px solid var(--color-title-bg);
+    outline: 1px solid var(--decor-color);
   }
 
   &:focus {
@@ -71,7 +71,7 @@
   }
 
   &:focus-visible {
-    border-bottom: 1px solid var(--color-title-bg);
+    border-bottom: 1px solid var(--decor-color);
   }
 }
   
@@ -94,25 +94,24 @@
 }
 
 .header__label {
-  color: var(--color-label);
+  color: var(--label-color);
   font-size: var(--font-size-label);
   font-weight: bold;
   font-family: var(--font_main);
-  text-shadow: 4px 4px var(--color-title-bg);
+  text-shadow: 4px 4px var(--text-shadow-color);
   margin-block-start: 1.1em;
 }
 
 .title {
   grid-area: title;
-  color: var(--color-title);
-  background-color: var(--color-title-bg);
+  color: var(--subtitle-color);
+  background-color: var(--subtitle-bg-color);
   font-family: var(--font_main);
   font-size: 18px;
 }
 
 .text {
-  color: var(--color-text);
-  background-color: var(--color-title);
+  color: var(--main-text-color);
   font-family: var(--font_main);
   font-size: 18px;
   margin-top: 12px;
@@ -120,7 +119,7 @@
 }
 
 .text a {
-  text-shadow: 2px 2px var(--color-title-bg);
+  text-shadow: 2px 2px var(--text-shadow-color);
   text-decoration: none;
 
   &:hover {
@@ -132,13 +131,13 @@
   }
 
   &:focus-visible {
-    outline: 1px solid var(--color-title-bg);
+    outline: 1px solid var(--decor-color);
   }
 }
 
 .title_invers {
-  color: var(--color-title-bg);
-  background-color: var(--color-title);
+  color: var(--title-color);
+  background-color: var(--page-bg-color);
 }
 
 .about {
@@ -238,8 +237,8 @@
     bottom: 20px;
     width: 25px;
     height: 25px;
-    border-left: 1px solid var(--color-title-bg);
-    border-bottom: 1px solid var(--color-title-bg);
+    border-left: 1px solid var(--decor-color);
+    border-bottom: 1px solid var(--decor-color);
   }
 
   &::after {
@@ -249,21 +248,22 @@
     top: 17px;
     width: 25px;
     height: 25px;
-    border-right: 1px solid var(--color-title-bg);
-    border-top: 1px solid var(--color-title-bg);
+    border-right: 1px solid var(--decor-color);
+    border-top: 1px solid var(--decor-color);
   }
 }
 
 .footer__label {
-  color: var(--color-label);
+  color: var(--label-color);
   font-size: var(--font-size-label);
   font-weight: bold;
-  font-family: var(--font_main); 
+  font-family: var(--font_main);
+  text-shadow: 2px 2px var(--text-shadow-color); 
 }
 
 .rec {
   font-family: var(--font_main);
-  color: var(--color-title-bg);
+  color: var(--decor-color);
   position: absolute;
   text-transform: uppercase;
   font-size: 18px;
@@ -278,9 +278,9 @@
   height: 12px;
   margin-top: 5px;
   margin-left: 5px;
-  border: 2px solid var(--color-title-bg);
+  border: 2px solid var(--decor-color);
   border-radius: 50%;
-  box-shadow: inset 10px 10px var(--color-title-bg);
+  box-shadow: inset 10px 10px var(--decor-color);
 }
 
 @media (width <= 768px) {
@@ -328,12 +328,6 @@
     flex-direction: column;
   }
 
-  .header .title {
-    margin-inline: 20px;
-    left: auto;
-    width: 90%;
-  }
-
   .header__label {
     margin-block-start: 72px;
     line-height: 96px;
@@ -367,6 +361,7 @@
 
   .header .title {
     margin-inline: 10px;
+    left: auto;
     width: 95%;
   }
 
@@ -392,10 +387,6 @@
     gap: 11px;
   }
 
-  .images__street {
-    order: 6;
-  }
-
   .footer {
     margin-block-start: 36px;
   }
@@ -410,47 +401,3 @@
     top: 12px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-
-  :root {
-    --color-label: #DB00FF;
-    --color-title: #000028;
-    --color-title-bg: #FF0070;
-    --color-text: #F1B2CE;
-  }
-
-  .page {
-    background-image: url(../images/cover-image-dark.png);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-
-  :root { 
-    --color-label: #FFC2E6;
-    --color-text: #353430;
-    --color-title-bg: #FF8DCB;
-    --color-title: #FFF1F7;   
-  }
-
-  .page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .theme_auto .rec {
-    visibility: hidden;
-  }
-  
-  .title, 
-  .title__invers, 
-  .header__theme-menu-button,
-  .decorated-zone::after,
-  .decorated-zone::before,
-  .footer::before,
-  .footer::after {
-    color: var(--color-text);
-    outline-color: var(--color-text);
-    border-color: var(--color-text);
-  }
-} 

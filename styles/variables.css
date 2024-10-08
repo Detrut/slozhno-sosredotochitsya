@@ -3,10 +3,14 @@
   и их переопределение под различные устройства
 */
 :root {
-  --color-label: #DB00FF;
-  --color-title: #000028;
-  --color-title-bg: #FF0070;
-  --color-text: #F1B2CE;
   --font-size-label: clamp(7.25rem, 5.6408rem + 6.5183vw, 9.8125rem);
   --font_main: 'IBM Plex Mono', sans-serif;
+  --decor-color: #FF0070;
+  --label-color: #DB00FF;
+  --text-shadow-color: #FF0070;
+  --main-text-color: #F1B2CE;
+  --subtitle-color: #000028;
+  --title-color: #FF0070;
+  --subtitle-bg-color: #FF0070;
+  --page-bg-color: #000028;
 }
