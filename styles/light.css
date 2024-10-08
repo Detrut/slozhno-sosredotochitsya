@@ -12,16 +12,14 @@
   --title-color: #353430;
   --subtitle-bg-color: #FF8DCB;
   --page-bg-color: none;
-
-  background-image: url(../images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
 }
 
-.theme_light .rec {
-  visibility: hidden;
+.page.theme_light .rec {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
-
   :root { 
   --decor-color: #353430;
   --label-color: #FFC2E6;
@@ -31,13 +29,10 @@
   --title-color: #353430;
   --subtitle-bg-color: #FF8DCB;
   --page-bg-color: none;
+  --background-image: url(../images/cover-image-light.png);
   }
 
-  .page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .theme_light .rec {
-    visibility: hidden;
+  .page.theme_light .rec {
+    display: none;
   }
 } 

@@ -13,8 +13,7 @@
   --title-color: #FF0070;
   --subtitle-bg-color: #FF0070;
   --page-bg-color: #000028;
-
-  background-image: url(../images/cover-image-dark.png)
+  --background-image: url(../images/cover-image-dark.png);
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
