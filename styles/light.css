@@ -31,8 +31,10 @@
   --title-color: #353430;
   --subtitle-bg-color: #FF8DCB;
   --page-bg-color: none;
+  }
 
-  background-image: url(../images/cover-image-light.png);
+  .page {
+    background-image: url(../images/cover-image-light.png);
   }
 
   .theme_light .rec {
