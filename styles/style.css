@@ -19,6 +19,7 @@
 
 .header {
   height: 100vh;
+  min-height: 768px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -219,6 +220,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-height: 768px;
 }
 .footer::before {
   content: "";
@@ -275,6 +277,9 @@
   .page {
     width: 768px;
   }
+  .header {
+    min-height: 1024px;
+  }
   .header__theme-menu {
     display: block;
   }
@@ -297,10 +302,16 @@
   .title_invers {
     width: 236px;
   }
+  .footer {
+    min-height: 1024px;
+  }
 }
 @media (width <= 375px) {
   .page {
     width: 375px;
+  }
+  .header {
+    min-height: 668px;
   }
   .about, .problem, .hints, .images {
     display: flex;
@@ -355,6 +366,7 @@
   }
   .footer {
     margin-block-start: 36px;
+    min-height: 668px;
   }
   .footer::before {
     left: 10px;
