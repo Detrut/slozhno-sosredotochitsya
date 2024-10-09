@@ -11,7 +11,7 @@
   --subtitle-color: #353430;
   --title-color: #353430;
   --subtitle-bg-color: #FF8DCB;
-  --page-bg-color: none;
+  --page-bg-color: #FFF1F7;
   --background-image: url(../images/cover-image-light.png);
 }
 
@@ -28,11 +28,11 @@
     --subtitle-color: #353430;
     --title-color: #353430;
     --subtitle-bg-color: #FF8DCB;
-    --page-bg-color: none;
+    --page-bg-color: #FFF1F7;
     --background-image: url(../images/cover-image-light.png);
   }
 
-  .page.theme_light .rec {
+  .page.theme_auto .rec {
     display: none;
   }
 } 

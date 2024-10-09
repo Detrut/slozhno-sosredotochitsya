@@ -3,8 +3,8 @@
   и их переопределение под различные устройства
 */
 :root {
-  --font-size-label: clamp(7.25rem, 5.6408rem + 6.5183vw, 9.8125rem);
-  --font_main: 'IBM Plex Mono', sans-serif;
+  --font-size-label: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-main: 'IBM Plex Mono', monospace;
   --decor-color: #FF0070;
   --label-color: #DB00FF;
   --text-shadow-color: #FF0070;

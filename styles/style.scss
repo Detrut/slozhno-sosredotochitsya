@@ -13,7 +13,6 @@
 
 .main {
   margin: 0 20px;
-  background-color: var(--page-bg-color);
 }
   
 .header {
@@ -51,7 +50,7 @@
 }
 
 .header__theme-menu-button {
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   font-size: 18px;
   background-color: transparent;
   color: var(--decor-color);
@@ -60,11 +59,13 @@
   padding: 0 12px;
 
   &_active {
-      outline: 2px solid var(--decor-color);
+      outline: 1px solid var(--decor-color);
+      pointer-events: none;
   }
 
   &:hover {
     outline: 1px solid var(--decor-color);
+    cursor: pointer;
   }
 
   &:focus {
@@ -98,7 +99,7 @@
   color: var(--label-color);
   font-size: var(--font-size-label);
   font-weight: bold;
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   text-shadow: 4px 4px var(--text-shadow-color);
   margin-block-start: 1.1em;
 }
@@ -107,20 +108,25 @@
   grid-area: title;
   color: var(--subtitle-color);
   background-color: var(--subtitle-bg-color);
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   font-size: 18px;
+  font-weight: bold;
+}
+
+.title_font-weight-normal {
+  font-weight: normal;
 }
 
 .text {
   color: var(--main-text-color);
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   font-size: 18px;
   margin-top: 12px;
   line-height: 1.284;
 }
 
 .text a {
-  text-shadow: 2px 2px var(--text-shadow-color);
+  text-shadow: 2px 2px var(--subtitle-bg-color);
   text-decoration: none;
 
   &:hover {
@@ -132,20 +138,21 @@
   }
 
   &:focus-visible {
-    outline: 1px solid var(--decor-color);
+    outline: 1px solid var(--main-text-color);
   }
 }
 
 .title_invers {
   color: var(--title-color);
   background-color: var(--page-bg-color);
+  width: 315px;
 }
 
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "title ." "title .";
-  gap: 20px;
+  gap: 12px;
   margin-top: 60px;
   margin-bottom: 64px;
 }
@@ -163,10 +170,9 @@
 .problem {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 48px auto;
   gap: 20px;
   grid-template-areas: "title title title" ". . .";
-  margin-top: 60px;
+  margin-top: 72px;
   margin-bottom: 82px;
 }
   
@@ -174,9 +180,13 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 24px;
   grid-auto-rows: auto;
-  grid-template-areas: "title card" "title ." "title ." "title ." "title ." "title .";
+  grid-template-areas: "title ." "title ." "title ." "title ." "title ." "title .";
+
+  & .card {
+    grid-column-start: 2;
+    margin-left: -6px;
+  }
 }
   
 .images {
@@ -231,40 +241,18 @@
   align-items: center;
   height: 100vh;
   min-height: 768px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    width: 25px;
-    height: 25px;
-    border-left: 1px solid var(--decor-color);
-    border-bottom: 1px solid var(--decor-color);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    top: 17px;
-    width: 25px;
-    height: 25px;
-    border-right: 1px solid var(--decor-color);
-    border-top: 1px solid var(--decor-color);
-  }
 }
 
 .footer__label {
   color: var(--label-color);
   font-size: var(--font-size-label);
   font-weight: bold;
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   text-shadow: 2px 2px var(--text-shadow-color); 
 }
 
 .rec {
-  font-family: var(--font_main);
+  font-family: var(--font-main);
   color: var(--decor-color);
   position: absolute;
   text-transform: uppercase;
@@ -294,6 +282,10 @@
     min-height: 1024px;
   }
 
+  .header .title {
+    width: 47%;
+  }
+
   .header__theme-menu {
     display: block;
   }
@@ -303,11 +295,6 @@
     align-items: self-end;
     margin-block-start: 11em;
     padding-inline-end: 20px;
-  }
-
-  .problem {
-    display: flex;
-    flex-direction: column;
   }
 
   .header__label {
@@ -322,12 +309,30 @@
     width: 236px;
   }
 
+  .about {
+    gap: 20px;
+  }
+
+  .problem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 62px;
+  }
+
+  .hints .card {
+    margin-left: 0;
+  }
+
   .footer {
     min-height: 1024px;
   }
 }
 
 @media (width <= 375px) {
+
+  :root {
+    --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 
   .page {
     width: 375px;
@@ -385,11 +390,14 @@
   
   .about {
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 54px;
+    gap: 24px;
   }
 
   .problem {
-    margin-bottom: 51px;
+    margin-bottom: 52px;
+    margin-top: 54px;
+    gap: 22px;
   }
 
   .hints {
@@ -397,7 +405,7 @@
   }
 
   .images {
-    margin-block-start: 50px;
+    margin-block-start: 46px;
     gap: 11px;
   }
 
