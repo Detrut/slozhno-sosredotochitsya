@@ -17,7 +17,7 @@
 }
 
 .page.theme_light .rec {
-  display: none;
+  visibility: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -35,6 +35,6 @@
   }
 
   .page.theme_auto .rec {
-    display: none;
+    visibility: hidden;
   }
 } 
