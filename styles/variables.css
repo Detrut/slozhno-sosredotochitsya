@@ -6,6 +6,7 @@
   --font-size-label: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-main: 'IBM Plex Mono', monospace;
   --decor-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --label-color: #DB00FF;
   --text-shadow-color: #FF0070;
   --main-text-color: #F1B2CE;

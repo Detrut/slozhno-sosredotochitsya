@@ -64,7 +64,7 @@
   }
 
   &:hover {
-    outline: 1px solid var(--decor-color);
+    outline: 1px solid var(--hover-color);
     cursor: pointer;
     
   }
@@ -145,7 +145,7 @@
 
 .title_invers {
   color: var(--title-color);
-  background-color: var(--page-bg-color);
+  background-color: transparent;
   width: 315px;
 }
 
@@ -275,9 +275,6 @@
 }
 
 @media (width <= 768px) {
-  .page {
-    width: 768px;
-  }
 
   .header {
     min-height: 1024px;
@@ -329,7 +326,7 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 500px) {
 
   :root {
     --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);

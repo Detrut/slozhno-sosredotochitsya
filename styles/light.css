@@ -5,6 +5,7 @@
 */
 .page.theme_light {
   --decor-color: #353430;
+  --hover-color: #3534306e;
   --label-color: #FFC2E6;
   --text-shadow-color: #FF0070;
   --main-text-color: #353430;
@@ -22,6 +23,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --decor-color: #353430;
+    --hover-color: #3534306e;
     --label-color: #FFC2E6;
     --text-shadow-color: #FF0070;
     --main-text-color: #353430;
